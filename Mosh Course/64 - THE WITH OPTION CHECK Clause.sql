@@ -1,15 +1,3 @@
-
--- -- UPDATABLE VIEWS -- --
-/*
-
-Does NOT have:
-- DISTINCT
-- Aggregate Functions(MIN, MAX, SUM ...)
-- GROUP BY / HAVING
-- UNION 
-
-*/
-
 USE sql_invoicing;
 
 CREATE OR REPLACE VIEW invoices_with_balance AS
@@ -24,7 +12,5 @@ SELECT
     due_date,
     payment_date
 FROM invoices
-/* NOT POSSIBLE WITH:
-HAVING balance > 0
-*/
 WHERE invoice_total - payment_total > 0
+WITH CHECK OPTION
