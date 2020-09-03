@@ -1,0 +1,3 @@
+- RESTRICT - will reject the UPDATE from happening
+- CASCADE - mySQL will automatically update the records in the child table if the primary key changes
+- SET NULL - if changed, will set Foreign Key to NULL
