@@ -1,0 +1,6 @@
+Don't have any columns that are reliant on other columns like
+the balance column in this example:
+
+ ----name----total----payment_total----balance----
+|   Denis |   100  |       80       |    20       |
+ =================================================
